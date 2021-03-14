@@ -8,13 +8,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-    var total = 0;
-    var count = 0;
-
-    array.forEach(function(item, index){
-        total += item;
-        count++;
-    });
-
-    return total / count;
+    if (array == undefined || array.length == 0) {
+        return 0;
+    }
+    return (
+        array.reduce(function(a, b) {
+            return a + b;
+        }, 0) / array.length
+    );
 }
