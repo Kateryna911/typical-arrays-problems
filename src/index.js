@@ -8,9 +8,14 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  var sum = 0;
-  for (var i = 0, j = arr.length; i < j; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
+  return 0;
+    var total = 0;
+    var count = 0;
+
+    array.forEach(function(item, index){
+        total += item;
+        count++;
+    });
+
+    return total / count;
 }
